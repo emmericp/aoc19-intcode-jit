@@ -7,8 +7,10 @@ Your Intcode is running too slow? Use this x86 JIT compiler!
 The [included example](./fibonacci.intcode) calculates Fibonacci numbers mod signed 64 bit ints, run it like this.
 
 ```bash
-cargo run --release -- fibonacci.intcode 1000
+cargo +nightly run --release -- fibonacci.intcode 1000
 ```
+
+(Requires a Rust nightly build, install with `rustup install nightly`)
 
 It's super-fast: Calculating the 100000000th Fibonacci number only takes 420 milliseconds on my laptop, that's 1.6 billion Intcode instructions per second!
 
